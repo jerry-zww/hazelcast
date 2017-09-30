@@ -140,7 +140,7 @@ public class DefaultDiscoveryService
 
             List<DiscoveryStrategyFactory> factories = collectFactories(discoveryStrategyConfigs, configClassLoader);
 
-            List<DiscoveryStrategy> discoveryStrategies = new ArrayList<DiscoveryStrategy>();
+            Set<DiscoveryStrategy> discoveryStrategies = new HashSet<DiscoveryStrategy>();
             for (DiscoveryStrategyConfig config : discoveryStrategyConfigs) {
                 DiscoveryStrategy discoveryStrategy = buildDiscoveryStrategy(config, factories);
                 discoveryStrategies.add(discoveryStrategy);
